@@ -35,9 +35,14 @@
         <div class="hero__beam hero__beam--sharp"></div>
       </div>
       <div class="hero__core-wrap" aria-hidden="true">
-        <div class="hero__orbit"></div>
-        <div class="hero__orbit hero__orbit--mid"></div>
-        <div class="hero__core"></div>
+        <span class="hero__mark-glow"></span>
+        <img
+          class="hero__mark"
+          src="assets/oldpulsar-hero.svg"
+          alt=""
+          width="112"
+          height="112"
+        >
       </div>
       <div class="hero__vignette" aria-hidden="true"></div>
 
@@ -72,7 +77,10 @@
             <p class="project-card__desc">
               A personal expense tracker that stays on your device. Local-first, private by design — clear money insight without the cloud noise.
             </p>
-            <a class="project-card__link" href="/privacy">Privacy &amp; terms</a>
+            <div class="project-card__links">
+              <a class="project-card__link" href="/privacy">Privacy</a>
+              <a class="project-card__link project-card__link--secondary" href="/terms">Terms</a>
+            </div>
           </article>
         </div>
       </div>
@@ -82,10 +90,6 @@
   <footer class="site-footer" id="contact">
     <div class="container">
       <a class="site-footer__email" href="mailto:oldpulsarstudio@gmail.com">oldpulsarstudio@gmail.com</a>
-      <nav class="site-footer__legal" aria-label="Legal">
-        <a href="/terms">Terms</a>
-        <a href="/privacy">Privacy</a>
-      </nav>
       <p class="site-footer__copy">&copy; <span id="year"></span> OldPulsar Studio</p>
     </div>
   </footer>

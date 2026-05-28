@@ -207,8 +207,9 @@ a:focus-visible {
     transparent 100%
   );
   filter: blur(18px);
-  opacity: 0.9;
-  animation: beamPulse 6s ease-in-out infinite;
+  opacity: 0.92;
+  animation: beamPulse 7s linear infinite;
+  will-change: opacity;
 }
 
 .hero__beam--sharp {
@@ -231,7 +232,11 @@ a:focus-visible {
 @keyframes beamPulse {
   0%,
   100% {
-    opacity: 0.75;
+    opacity: 0.68;
+  }
+  25%,
+  75% {
+    opacity: 0.84;
   }
   50% {
     opacity: 1;
@@ -242,49 +247,45 @@ a:focus-visible {
   position: absolute;
   top: 22%;
   left: 12%;
-  width: clamp(4rem, 12vw, 7rem);
-  height: clamp(4rem, 12vw, 7rem);
+  width: clamp(5.5rem, 14vw, 8rem);
+  height: clamp(5.5rem, 14vw, 8rem);
   pointer-events: none;
 }
 
-.hero__orbit {
-  position: absolute;
-  inset: -60%;
-  border: 1px solid rgba(253, 224, 71, 0.12);
-  border-radius: 50%;
+.hero__mark {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-.hero__orbit--mid {
-  inset: -35%;
-  border-width: 2px;
-  border-color: rgba(253, 224, 71, 0.22);
-}
-
-.hero__core {
+.hero__mark-glow {
   position: absolute;
-  inset: 15%;
+  inset: -40%;
   border-radius: 50%;
-  background: radial-gradient(circle at 40% 35%, var(--beam-hot) 0%, var(--beam-gold) 55%, #f59e0b 100%);
-  box-shadow:
-    0 0 30px rgba(253, 224, 71, 0.6),
-    0 0 80px rgba(253, 224, 71, 0.35),
-    0 0 120px rgba(56, 189, 248, 0.15);
-  animation: coreGlow 5s ease-in-out infinite;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(253, 224, 71, 0.4) 28%,
+    rgba(253, 224, 71, 0.12) 52%,
+    transparent 72%
+  );
+  animation: coreGlow 7s linear infinite;
+  will-change: opacity;
 }
 
 @keyframes coreGlow {
   0%,
   100% {
-    box-shadow:
-      0 0 30px rgba(253, 224, 71, 0.55),
-      0 0 80px rgba(253, 224, 71, 0.3),
-      0 0 120px rgba(56, 189, 248, 0.12);
+    opacity: 0.35;
+  }
+  25%,
+  75% {
+    opacity: 0.62;
   }
   50% {
-    box-shadow:
-      0 0 40px rgba(253, 224, 71, 0.75),
-      0 0 100px rgba(253, 224, 71, 0.45),
-      0 0 140px rgba(56, 189, 248, 0.2);
+    opacity: 0.9;
   }
 }
 
@@ -422,13 +423,18 @@ a:focus-visible {
   font-size: 0.95rem;
 }
 
+.project-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .project-card__link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 2.75rem;
   padding: 0.6rem 1.25rem;
-  align-self: flex-start;
   font-weight: 500;
   font-size: 0.9rem;
   color: var(--space-deep);
@@ -443,6 +449,19 @@ a:focus-visible {
   color: var(--space-deep);
   filter: brightness(1.08);
   box-shadow: 0 0 20px rgba(245, 166, 35, 0.35);
+}
+
+.project-card__link--secondary {
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid rgba(59, 130, 246, 0.45);
+}
+
+.project-card__link--secondary:hover {
+  color: var(--beam-hot);
+  filter: none;
+  box-shadow: 0 0 16px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.7);
 }
 
 /* —— Footer —— */
@@ -594,7 +613,7 @@ a:focus-visible {
 
   .hero__stars,
   .hero__beam,
-  .hero__core {
+  .hero__mark-glow {
     animation: none;
   }
 }
@@ -603,25 +622,25 @@ a:focus-visible {
 
 @media (max-width: 639px) {
   .hero__beam {
-    top: 8%;
+    top: calc(var(--header-h) + 0.75rem);
     left: -30%;
     width: 160vw;
     opacity: 0.65;
   }
 
   .hero__beam--sharp {
-    top: 10%;
+    top: calc(var(--header-h) + 1.75rem);
     opacity: 0.4;
   }
 
   .hero__core-wrap {
-    top: 12%;
+    top: calc(var(--header-h) + 2.75rem);
     left: 50%;
     transform: translateX(-50%);
   }
 
   .hero__content {
-    margin-top: clamp(8rem, 28vh, 12rem);
+    margin-top: calc(var(--header-h) + 7.5rem);
     text-align: center;
     margin-inline: auto;
   }
