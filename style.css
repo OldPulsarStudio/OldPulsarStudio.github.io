@@ -151,6 +151,7 @@ a:focus-visible {
 .hero__stars {
   position: absolute;
   inset: 0;
+  z-index: 0;
   opacity: 0.85;
   background-image:
     radial-gradient(1px 1px at 10% 20%, rgba(255, 255, 255, 0.7), transparent),
@@ -176,6 +177,7 @@ a:focus-visible {
 .hero__vignette {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: radial-gradient(ellipse 100% 80% at 50% 50%, transparent 30%, rgba(2, 6, 23, 0.75) 100%);
   pointer-events: none;
 }
@@ -183,6 +185,7 @@ a:focus-visible {
 .hero__beam-wrap {
   position: absolute;
   inset: 0;
+  z-index: 2;
   overflow: hidden;
   pointer-events: none;
 }
@@ -247,6 +250,7 @@ a:focus-visible {
   position: absolute;
   top: 22%;
   left: 12%;
+  z-index: 3;
   width: clamp(4rem, 12vw, 7rem);
   height: clamp(4rem, 12vw, 7rem);
   pointer-events: none;
@@ -308,6 +312,11 @@ a:focus-visible {
 .hero__content {
   position: relative;
   max-width: 36rem;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 4;
 }
 
 .hero__eyebrow {
@@ -442,42 +451,52 @@ a:focus-visible {
 .project-card__links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.75rem;
+  margin-top: 0.25rem;
 }
 
 .project-card__link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: 6.5rem;
   min-height: 2.75rem;
   padding: 0.6rem 1.25rem;
   font-weight: 500;
   font-size: 0.9rem;
-  color: var(--space-deep);
-  background: linear-gradient(135deg, var(--artio-amber) 0%, #e8940f 100%);
+  color: var(--text-primary);
+  background: rgba(6, 21, 18, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0.5rem;
   transition:
-    filter 0.2s ease,
-    box-shadow 0.2s ease;
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
 .project-card__link:hover {
-  color: var(--space-deep);
-  filter: brightness(1.08);
-  box-shadow: 0 0 20px rgba(245, 166, 35, 0.35);
-}
-
-.project-card__link--secondary {
-  color: var(--text-primary);
-  background: transparent;
-  border: 1px solid rgba(59, 130, 246, 0.45);
-}
-
-.project-card__link--secondary:hover {
   color: var(--beam-hot);
-  filter: none;
+  background: rgba(6, 21, 18, 0.75);
+}
+
+.project-card__link--privacy {
+  border-color: rgba(245, 166, 35, 0.45);
+}
+
+.project-card__link--privacy:hover {
+  border-color: rgba(245, 166, 35, 0.75);
+  box-shadow: 0 0 16px rgba(245, 166, 35, 0.2);
+}
+
+.project-card__link--terms {
+  border-color: rgba(59, 130, 246, 0.45);
+}
+
+.project-card__link--terms:hover {
+  border-color: rgba(59, 130, 246, 0.75);
   box-shadow: 0 0 16px rgba(59, 130, 246, 0.2);
-  border-color: rgba(59, 130, 246, 0.7);
 }
 
 /* —— Footer —— */
