@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Build terms/index.html and privacy/index.html from expense_tracker docs."""
+"""Build terms/index.html and privacy/index.html from expense_tracker policy_terms."""
 
 from pathlib import Path
 
 from md_to_legal_html import convert
 
 ROOT = Path(__file__).resolve().parent.parent
-DOCS = ROOT.parent / "expense_tracker" / "docs"
+POLICY_TERMS = ROOT.parent / "expense_tracker" / "policy_terms"
 
 TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
@@ -39,6 +39,10 @@ TEMPLATE = """<!DOCTYPE html>
 
   <main class="page-legal">
     <div class="container legal">
+      <nav class="legal-lang-nav" aria-label="Language">
+        <a href="#english">English</a>
+        <a href="#espanol">Español</a>
+      </nav>
       <div class="legal-body">
       {body}
       </div>
@@ -64,8 +68,8 @@ TEMPLATE = """<!DOCTYPE html>
 """
 
 
-def build(name: str, md_file: str, out_dir: str, title: str, description: str) -> None:
-    md_path = DOCS / md_file
+def build(md_file: str, out_dir: str, title: str, description: str) -> None:
+    md_path = POLICY_TERMS / md_file
     body = convert(md_path.read_text(encoding="utf-8"))
     html = TEMPLATE.format(title=title, description=description, body=body)
     out_path = ROOT / out_dir / "index.html"
@@ -75,15 +79,13 @@ def build(name: str, md_file: str, out_dir: str, title: str, description: str) -
 
 def main() -> None:
     build(
-        "privacy",
-        "artio-privacy-policy.md",
+        "artio-privacy-policy-v2.md",
         "privacy",
         "Artio Privacy Policy",
         "Artio Privacy Policy — OldPulsar Studio",
     )
     build(
-        "terms",
-        "artio-terms-of-service.md",
+        "artio-terms-of-service-v2.md",
         "terms",
         "Artio Terms of Service",
         "Artio Terms of Service — OldPulsar Studio",

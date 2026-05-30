@@ -29,12 +29,12 @@ Open [http://localhost:8080](http://localhost:8080).
 4. Branch: `main` / **/ (root)**
 5. Save — the site will be live at `https://oldpulsarstudio.github.io/`
 
-## Legal pages (English)
+## Legal pages (English + Spanish)
 
-Content is generated from the Artio docs in the expense tracker repo (Spanish sections are omitted on the site):
+Content is generated from the Artio policy files in the expense tracker repo:
 
-- `../expense_tracker/docs/artio-privacy-policy.md`
-- `../expense_tracker/docs/artio-terms-of-service.md`
+- `../expense_tracker/policy_terms/artio-privacy-policy-v2.md`
+- `../expense_tracker/policy_terms/artio-terms-of-service-v2.md`
 
 After editing those files, rebuild the site pages:
 

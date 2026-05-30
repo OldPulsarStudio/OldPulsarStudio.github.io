@@ -29,13 +29,19 @@
 
   <main class="page-legal">
     <div class="container legal">
+      <nav class="legal-lang-nav" aria-label="Language">
+        <a href="#english">English</a>
+        <a href="#espanol">Español</a>
+      </nav>
       <div class="legal-body">
       <h1>Artio Privacy Policy</h1>
       <p><strong>Effective date:</strong> May 28, 2026</p>
       <p><strong>App:</strong> Artio (Android package: <code>com.oldpulsar.finance</code>)</p>
       <p><strong>Developer:</strong> OldPulsar Studio</p>
       <p><strong>Contact:</strong> <a href="mailto:oldpulsarstudio@gmail.com">oldpulsarstudio@gmail.com</a></p>
+      <p>This document contains the Privacy Policy in English and Spanish.</p>
       <hr>
+      <h2 id="english" class="legal-lang-heading">English</h2>
       <h3 id="1-introduction">1. Introduction</h3>
       <p>This Privacy Policy describes how OldPulsar Studio ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>") handles information when you use <strong>Artio</strong>, our personal finance tracking application for Android distributed through Google Play (version 1.0 and later, unless we publish an updated policy).</p>
       <p>By installing or using Artio, you acknowledge that you have read this Privacy Policy. If you do not agree with this policy, do not use the app.</p>
@@ -117,6 +123,7 @@
       <li>Backup files may include database tables used for technical compatibility. Version 1 does <strong>not</strong> offer investment tracking features in the app interface, even if related tables are present in a backup file.</li>
       </ul>
       <h4 id="9-2-import">9.2 Import</h4>
+      <p>> ⚠️ <strong>WARNING:</strong> Importing a backup immediately and permanently replaces all existing data on this device. This action cannot be undone. Ensure you have a separate backup before importing.</p>
       <p>When you import a backup:</p>
       <ul>
       <li>The import <strong>permanently replaces</strong> accounts, transactions, and budgets on that device with the contents of the backup file.</li>
@@ -150,7 +157,7 @@
       <h4 id="13-1-in-app-tracking">13.1 In-app tracking</h4>
       <p>We do <strong>not</strong> integrate third-party analytics, advertising, or user-behavior tracking SDKs into Artio version 1.</p>
       <h4 id="13-2-google-play-platform-data">13.2 Google Play platform data</h4>
-      <p>After publication on Google Play, <strong>Google</strong> may collect certain app performance and stability information through the Play Store and Android platform (for example, crash reports, ANRs, and aggregated vitals), subject to Google's policies. That collection is <strong>outside our direct control</strong> and is not the same as in-app analytics operated by OldPulsar Studio.</p>
+      <p>After publication on Google Play, <strong>Google Play and the Android platform</strong> may collect diagnostic information such as crash reports, ANRs, and performance metrics under Google's own privacy policies. That collection is <strong>outside our direct control</strong> and is not the same as in-app analytics operated by OldPulsar Studio.</p>
       <p>For information about Google's practices, see Google's privacy documentation and your device settings.</p>
       <h3 id="14-data-retention">14. Data Retention</h3>
       <p>Because your financial data is stored locally in version 1:</p>
@@ -169,6 +176,7 @@
       <li><strong>Opt out of optional features:</strong> leave app lock disabled; do not export/import backups; do not use the donation link.</li>
       </ul>
       <p>If you contact us at <a href="mailto:oldpulsarstudio@gmail.com">oldpulsarstudio@gmail.com</a>, we will respond to reasonable privacy requests to the extent we are able, given the local-only design of version 1.</p>
+      <p>If you are located in Mexico, you may exercise your rights under the Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) by contacting us at the address above. OldPulsar Studio acts as the data controller (*Responsable*) under applicable Mexican privacy law. Because most data is stored locally on your device, most rights are exercised directly in the app.</p>
       <h3 id="16-security">16. Security</h3>
       <p>We implement reasonable technical measures appropriate for a local-first mobile app, including use of the device's secure storage for certain preferences and optional app lock integration with OS authentication.</p>
       <p>However, <strong>no method of electronic storage or transmission is completely secure</strong>. You are responsible for securing your device (passcode/biometrics), exported backup files, and any third-party locations where you store backups.</p>
@@ -184,6 +192,156 @@
       <p><strong>OldPulsar Studio</strong></p>
       <p>Email: <a href="mailto:oldpulsarstudio@gmail.com">oldpulsarstudio@gmail.com</a></p>
       <hr>
+      <h2 id="espanol" class="legal-lang-heading">Español</h2>
+      <h3 id="es-1-introduccion">1. Introducción</h3>
+      <p>Esta Política de Privacidad describe cómo OldPulsar Studio ("<strong>nosotros</strong>" o "<strong>nuestro</strong>") trata la información cuando usted utiliza <strong>Artio</strong>, nuestra aplicación de seguimiento de finanzas personales para Android distribuida a través de Google Play (versión 1.0 y posteriores, salvo que publiquemos una política actualizada).</p>
+      <p>Al instalar o usar Artio, usted reconoce que ha leído esta Política de Privacidad. Si no está de acuerdo con esta política, no utilice la aplicación.</p>
+      <h3 id="es-2-resumen">2. Resumen</h3>
+      <p>Artio está diseñada para ser <strong>local-first</strong> (prioridad local). En la versión 1:</p>
+      <ul>
+      <li>Sus registros financieros se almacenan <strong>en su dispositivo</strong>, no en nuestros servidores.</li>
+      <li><strong>No</strong> exigimos que cree una cuenta para usar la aplicación.</li>
+      <li><strong>No</strong> operamos sincronización en la nube, no cargamos sus datos financieros en nuestra infraestructura ni vendemos su información personal.</li>
+      <li><strong>No</strong> integramos analítica, publicidad ni SDKs de seguimiento conductual dentro de la aplicación.</li>
+      <li>Las funciones opcionales—como exportar respaldos, el bloqueo opcional de la app y las donaciones voluntarias—se describen a continuación.</li>
+      </ul>
+      <h3 id="es-3-informacion-que-usted-proporciona-en-la-aplicacion">3. Información que usted proporciona en la aplicación</h3>
+      <p>Artio almacena información que <strong>usted ingresa o genera al usar la aplicación</strong>, incluyendo:</p>
+      <ul>
+      <li><strong>Cuentas:</strong> nombres, tipos (por ejemplo, efectivo o tarjeta de crédito), saldos iniciales, colores y preferencias de visibilidad.</li>
+      <li><strong>Categorías:</strong> nombres, tipos (gasto o ingreso), orden y colores.</li>
+      <li><strong>Transacciones:</strong> montos, fechas, descripciones, tipos (gasto, ingreso o transferencia), cuentas y categorías vinculadas, y campos relacionados con pagos a plazos cuando corresponda.</li>
+      <li><strong>Presupuestos:</strong> nombres, montos, configuración de periodos, ajustes acumulativos y categorías vinculadas.</li>
+      <li><strong>Preferencias de visualización:</strong> moneda de visualización, tema (claro u oscuro) e idioma de la aplicación (inglés o español).</li>
+      </ul>
+      <p>Esta información refleja su actividad y decisiones financieras personales. No exigimos su nombre legal, correo electrónico, número de teléfono ni identificación oficial para usar Artio en la versión 1.</p>
+      <h3 id="es-4-informacion-generada-localmente-por-la-aplicacion">4. Información generada localmente por la aplicación</h3>
+      <p>Para funcionar en su dispositivo, la aplicación también puede almacenar:</p>
+      <ul>
+      <li>Un <strong>identificador local anónimo</strong> (un UUID generado aleatoriamente) usado para organizar sus datos en el dispositivo.</li>
+      <li><strong>Marcas de tiempo</strong> asociadas con registros que usted crea o modifica.</li>
+      <li><strong>Ajustes de bloqueo de la app</strong> (como si el bloqueo está activado y tiempos de inactivido o segundo plano), almacenados en el almacenamiento seguro del dispositivo.</li>
+      <li><strong>Preferencias de tema e idioma</strong>, almacenadas en el almacenamiento seguro del dispositivo.</li>
+      </ul>
+      <p>En la versión 1, no usamos esta información para identificarle fuera de su dispositivo.</p>
+      <h3 id="es-5-informacion-que-no-recopilamos-en-la-version-1">5. Información que no recopilamos en la versión 1</h3>
+      <p>En la versión actual de Google Play, <strong>no</strong>:</p>
+      <ul>
+      <li>Exigimos registro de cuenta ni recopilamos credenciales de inicio de sesión para Artio.</li>
+      <li>Cargamos, sincronizamos ni almacenamos sus datos financieros en servidores de OldPulsar Studio.</li>
+      <li>Recibimos ni almacenamos números de tarjeta, cuentas bancarias u otras credenciales de pago a través de la aplicación.</li>
+      <li>Recibimos datos biométricos en bruto (como huellas dactilares o plantillas faciales).</li>
+      <li>Operamos analítica, redes publicitarias ni seguimiento entre aplicaciones dentro de la app.</li>
+      <li>Sabemos si usted completó una donación, cuánto donó o qué método de pago utilizó.</li>
+      </ul>
+      <h3 id="es-6-como-usamos-la-informacion">6. Cómo usamos la información</h3>
+      <p>Usamos la información descrita anteriormente <strong>solo en su dispositivo</strong> para:</p>
+      <ul>
+      <li>Mostrar y organizar sus cuentas, transacciones, categorías y presupuestos.</li>
+      <li>Calcular saldos, progreso de presupuestos e información resumida.</li>
+      <li>Aplicar sus preferencias de visualización, idioma y tema.</li>
+      <li>Aplicar ajustes opcionales de bloqueo de la app que usted elija activar.</li>
+      <li>Crear archivos de respaldo cuando usted solicite exportar.</li>
+      <li>Restaurar datos cuando usted elija importar un archivo de respaldo.</li>
+      </ul>
+      <p>No usamos su información para tomar decisiones automatizadas que produzcan efectos legales o de importancia similar.</p>
+      <h3 id="es-7-donde-se-almacenan-los-datos">7. Dónde se almacenan los datos</h3>
+      <h4 id="es-7-1-base-de-datos-en-el-dispositivo">7.1 Base de datos en el dispositivo</h4>
+      <p>Sus datos financieros principales se almacenan en una <strong>base de datos SQLite local</strong> en su dispositivo (<code>finance-tracker.db</code>). Esta base de datos permanece en su dispositivo a menos que usted la exporte, importe un respaldo de reemplazo, elimine datos en la app o desinstale la aplicación.</p>
+      <h4 id="es-7-2-almacenamiento-seguro-del-dispositivo">7.2 Almacenamiento seguro del dispositivo</h4>
+      <p>Ciertas preferencias y ajustes de bloqueo se almacenan usando el <strong>almacenamiento seguro</strong> del sistema operativo (por ejemplo, almacenamiento seguro respaldado por Android Keystore mediante Expo Secure Store). Esto ayuda a proteger valores de configuración pequeños; por sí solo <strong>no cifra toda</strong> su base de datos financiera.</p>
+      <h4 id="es-7-3-copia-de-seguridad-automatica-de-android">7.3 Copia de seguridad automática de Android</h4>
+      <p>La copia de seguridad automática de Android para datos de la app está <strong>desactivada</strong> para Artio (<code>allowBackup: false</code>). No dependemos de Android Backup de Google para almacenar su base de datos financiera de Artio.</p>
+      <h4 id="es-7-4-sin-sincronizacion-en-la-nube-en-la-version-1">7.4 Sin sincronización en la nube en la versión 1</h4>
+      <p>La sincronización en la nube <strong>no está disponible</strong> en la versión 1. Sus datos financieros no se transmiten a OldPulsar Studio ni a un backend de sincronización como parte del funcionamiento normal de la aplicación.</p>
+      <h3 id="es-8-bloqueo-opcional-de-la-app-y-biometria">8. Bloqueo opcional de la app y biometría</h3>
+      <p>Artio ofrece un <strong>bloqueo de privacidad opcional</strong>. Si lo activa, la aplicación puede requerir autenticación mediante el <strong>PIN, contraseña, patrón o biometría</strong> de su dispositivo (como huella dactilar o desbloqueo facial) antes de mostrar sus datos.</p>
+      <p>Puntos importantes:</p>
+      <ul>
+      <li>La autenticación la gestiona el <strong>sistema operativo de su dispositivo</strong>, no OldPulsar Studio.</li>
+      <li><strong>No</strong> recibimos, almacenamos ni transmitimos sus identificadores biométricos ni secretos de autenticación.</li>
+      <li>El bloqueo de la app es un <strong>control de acceso de conveniencia</strong> para la interfaz. No garantiza protección contra todo acceso no autorizado a su dispositivo o a archivos de respaldo exportados.</li>
+      </ul>
+      <p>En dispositivos compatibles, la app puede solicitar permiso para usar APIs de autenticación biométrica únicamente para este paso de desbloqueo local.</p>
+      <h3 id="es-9-exportacion-e-importacion-de-respaldos">9. Exportación e importación de respaldos</h3>
+      <p>Artio le permite <strong>exportar</strong> e <strong>importar</strong> archivos de respaldo desde Ajustes.</p>
+      <h4 id="es-9-1-exportacion">9.1 Exportación</h4>
+      <p>Cuando exporta un respaldo:</p>
+      <ul>
+      <li>La app crea un <strong>archivo ZIP</strong> que contiene archivos CSV y un manifiesto con sumas de verificación.</li>
+      <li>Usted elige el destino mediante la hoja de compartir del dispositivo (por ejemplo, almacenamiento local, correo, nube o apps de mensajería que seleccione).</li>
+      <li><strong>No recibimos una copia</strong> de los respaldos exportados a menos que usted nos la envíe de forma independiente (por ejemplo, por correo para soporte).</li>
+      <li>Los archivos de respaldo pueden incluir tablas de base de datos usadas por compatibilidad técnica. La versión 1 <strong>no</strong> ofrece funciones de seguimiento de inversiones en la interfaz de la app, aunque existan tablas relacionadas en un archivo de respaldo.</li>
+      </ul>
+      <h4 id="es-9-2-importacion">9.2 Importación</h4>
+      <p>> ⚠️ <strong>ADVERTENCIA:</strong> Importar un respaldo reemplaza inmediata y permanentemente todos los datos existentes en este dispositivo. Esta acción no puede deshacerse. Asegúrese de tener un respaldo separado antes de importar.</p>
+      <p>Cuando importa un respaldo:</p>
+      <ul>
+      <li>La importación <strong>reemplaza permanentemente</strong> las cuentas, transacciones y presupuestos en ese dispositivo con el contenido del archivo de respaldo.</li>
+      <li><strong>El tema, el idioma y los ajustes de bloqueo de la app no se restauran</strong> desde el archivo de respaldo.</li>
+      </ul>
+      <h4 id="es-9-3-seguridad-del-respaldo">9.3 Seguridad del respaldo</h4>
+      <p>Los archivos de respaldo exportados en la versión 1 <strong>no están cifrados por la aplicación</strong>. Pueden contener información financiera sensible. Usted es responsable de proteger los archivos de respaldo y de elegir destinos seguros para almacenamiento o compartición.</p>
+      <p>Los respaldos protegidos con contraseña <strong>no están soportados</strong> en la versión 1.</p>
+      <h3 id="es-10-donaciones-opcionales">10. Donaciones opcionales</h3>
+      <p>Artio puede incluir un enlace opcional para apoyar el desarrollo mediante una <strong>página de pago externa</strong> (por ejemplo, PayPal o Buy Me a Coffee, según la URL configurada para la versión).</p>
+      <p>Si decide donar:</p>
+      <ul>
+      <li>Sale de la aplicación e interactúa directamente con el <strong>proveedor de pagos externo</strong>.</li>
+      <li>El proveedor procesa su transacción bajo sus propios términos y política de privacidad.</li>
+      <li><strong>No recibimos sus datos de pago</strong> (como números de tarjeta o credenciales de PayPal) a través de Artio.</li>
+      <li>No verificamos la finalización del pago dentro de la app; cualquier mensaje de agradecimiento mostrado al volver es solo una cortesía y no constituye prueba de pago.</li>
+      </ul>
+      <h3 id="es-11-comparticion-y-venta-de-datos">11. Compartición y venta de datos</h3>
+      <p><strong>No vendemos</strong> su información personal.</p>
+      <p>En la versión 1, <strong>no compartimos</strong> sus datos financieros con terceros como parte del servicio principal de la app, excepto:</p>
+      <ul>
+      <li><strong>Cuando usted elige compartir un respaldo</strong> mediante la hoja de compartir del dispositivo u otras apps que seleccione.</li>
+      <li><strong>Cuando usted elige abrir una página externa de donación/pago</strong>, regida por ese proveedor.</li>
+      <li><strong>Cuando la ley lo exija</strong>, mediante orden judicial o proceso legal válido (en la medida aplicable a OldPulsar Studio y a la información que realmente conservamos—que, en la versión 1, generalmente no incluye sus registros financieros en nuestros servidores).</li>
+      </ul>
+      <p>No usamos intermediarios de datos ni redes publicitarias en la aplicación.</p>
+      <h3 id="es-12-uso-de-red">12. Uso de red</h3>
+      <p>Artio versión 1 está diseñada para funcionar <strong>sin enviar sus datos financieros por internet</strong>.</p>
+      <p>La aplicación puede usar conectividad de red solo cuando <strong>usted inicia</strong> una acción que abre una URL externa (como el enlace opcional de donación). No operamos sincronización en segundo plano de sus registros financieros en la versión 1.</p>
+      <h3 id="es-13-analitica-diagnosticos-e-informes-de-fallos">13. Analítica, diagnósticos e informes de fallos</h3>
+      <h4 id="es-13-1-seguimiento-dentro-de-la-app">13.1 Seguimiento dentro de la app</h4>
+      <p><strong>No</strong> integramos SDKs de terceros de analítica, publicidad ni seguimiento de comportamiento del usuario en Artio versión 1.</p>
+      <h4 id="es-13-2-datos-de-la-plataforma-google-play">13.2 Datos de la plataforma Google Play</h4>
+      <p>Tras la publicación en Google Play, <strong>Google Play y la plataforma Android</strong> pueden recopilar información de diagnóstico como informes de fallos, ANR y métricas de rendimiento, conforme a las políticas de privacidad de Google. Esa recopilación está <strong>fuera de nuestro control directo</strong> y no es lo mismo que analítica dentro de la app operada por OldPulsar Studio.</p>
+      <p>Para información sobre las prácticas de Google, consulte la documentación de privacidad de Google y los ajustes de su dispositivo.</p>
+      <h3 id="es-14-conservacion-de-datos">14. Conservación de datos</h3>
+      <p>Como sus datos financieros se almacenan localmente en la versión 1:</p>
+      <ul>
+      <li>Los datos permanecen en su dispositivo hasta que los edite o elimine, importe un respaldo de reemplazo o desinstale la app.</li>
+      <li>Desinstalar Artio generalmente elimina la base de datos local de la app de su dispositivo, conforme al comportamiento de su dispositivo y Android.</li>
+      <li>No mantenemos una copia en servidor de sus registros financieros que debamos eliminar en la versión 1.</li>
+      </ul>
+      <p>Si nos contacta para soporte y proporciona voluntariamente información (como un archivo de respaldo o capturas de pantalla), usaremos esa información solo para responder a su solicitud, salvo que la ley exija un periodo de conservación mayor.</p>
+      <h3 id="es-15-sus-opciones-y-derechos">15. Sus opciones y derechos</h3>
+      <p>Según su ubicación, puede tener derechos de privacidad sobre información personal. Como Artio versión 1 almacena datos localmente y no opera cuentas de usuario en nuestros servidores, muchos controles se ejercen <strong>directamente por usted en su dispositivo</strong>:</p>
+      <ul>
+      <li><strong>Acceso y corrección:</strong> ver y editar sus datos en la app.</li>
+      <li><strong>Eliminación:</strong> eliminar registros individuales, reemplazar datos mediante importación o eliminar todos los datos desinstalando la app.</li>
+      <li><strong>Portabilidad:</strong> exportar un ZIP de respaldo desde Ajustes.</li>
+      <li><strong>Exclusión de funciones opcionales:</strong> mantener desactivado el bloqueo de la app; no exportar/importar respaldos; no usar el enlace de donación.</li>
+      </ul>
+      <p>Si nos contacta en <a href="mailto:oldpulsarstudio@gmail.com">oldpulsarstudio@gmail.com</a>, responderemos a solicitudes razonables de privacidad en la medida de lo posible, dado el diseño local-only de la versión 1.</p>
+      <p><strong>Derechos ARCO:</strong> Conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP), usted tiene derecho a Acceder, Rectificar, Cancelar y Oponerse (derechos ARCO) al tratamiento de sus datos personales. Dado que Artio almacena la información exclusivamente en su dispositivo, usted ejerce la mayoría de estos derechos directamente en la aplicación. Para cualquier solicitud adicional, contáctenos en <a href="mailto:oldpulsarstudio@gmail.com">oldpulsarstudio@gmail.com</a>. OldPulsar Studio actúa como Responsable del tratamiento en los términos de la LFPDPPP.</p>
+      <h3 id="es-16-seguridad">16. Seguridad</h3>
+      <p>Implementamos medidas técnicas razonables apropiadas para una app móvil local-first, incluyendo el uso del almacenamiento seguro del dispositivo para ciertas preferencias e integración opcional de bloqueo con la autenticación del sistema operativo.</p>
+      <p>Sin embargo, <strong>ningún método de almacenamiento o transmisión electrónica es completamente seguro</strong>. Usted es responsable de proteger su dispositivo (código/biometría), los archivos de respaldo exportados y cualquier ubicación de terceros donde almacene respaldos.</p>
+      <h3 id="es-17-privacidad-de-menores">17. Privacidad de menores</h3>
+      <p>Artio no está dirigida a menores de 13 años (o la edad mínima exigida en su jurisdicción), y no recopilamos a sabiendas información personal de menores. Si cree que un menor nos ha proporcionado información personal a través de canales de soporte, contáctenos y tomaremos medidas razonables para eliminar dicha información de nuestros registros, si la hubiera.</p>
+      <h3 id="es-18-usuarios-internacionales">18. Usuarios internacionales</h3>
+      <p>Artio puede usarse en distintos países. En la versión 1, sus datos financieros se procesan <strong>localmente en su dispositivo</strong> y no se cargan en servidores de OldPulsar Studio como parte del funcionamiento normal. Si exporta respaldos a servicios de terceros en otros países, aplican las políticas de esos servicios a la copia que usted coloque allí.</p>
+      <h3 id="es-19-cambios-a-esta-politica-de-privacidad">19. Cambios a esta Política de Privacidad</h3>
+      <p>Podemos actualizar esta Política de Privacidad periódicamente. Cuando lo hagamos, revisaremos la <strong>fecha de vigencia</strong> al inicio de este documento. Los cambios materiales también pueden reflejarse en notas de la versión u otro aviso razonable cuando corresponda.</p>
+      <p>Su uso continuado de Artio después de que una política actualizada entre en vigor constituye su reconocimiento de la política actualizada, salvo que la ley aplicable exija otro tipo de consentimiento.</p>
+      <h3 id="es-20-contactenos">20. Contáctenos</h3>
+      <p>Si tiene preguntas sobre esta Política de Privacidad o las prácticas de datos de Artio, contacte:</p>
+      <p><strong>OldPulsar Studio</strong></p>
+      <p>Correo electrónico: <a href="mailto:oldpulsarstudio@gmail.com">oldpulsarstudio@gmail.com</a></p>
       </div>
     </div>
   </main>

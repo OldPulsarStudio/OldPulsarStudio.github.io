@@ -7,21 +7,10 @@ from pathlib import Path
 
 LINK_MAP = {
     "artio-privacy-policy.md": "/privacy",
+    "artio-privacy-policy-v2.md": "/privacy",
     "artio-terms-of-service.md": "/terms",
+    "artio-terms-of-service-v2.md": "/terms",
 }
-
-
-def english_only(md: str) -> str:
-    """Keep content before the Spanish section and drop bilingual boilerplate."""
-    parts = re.split(r"^## Español\s*$", md, maxsplit=1, flags=re.MULTILINE)
-    text = parts[0].rstrip()
-    text = re.sub(
-        r"^This document contains the .+ in English and Spanish\.\s*\n",
-        "",
-        text,
-        flags=re.MULTILINE,
-    )
-    return text
 
 
 def inline(text: str) -> str:
@@ -42,15 +31,12 @@ def slug_heading(text: str) -> str:
     return s or "section"
 
 
-def convert(md: str, *, strip_spanish: bool = True) -> str:
-    if strip_spanish:
-        md = english_only(md)
+def convert(md: str) -> str:
     lines = md.splitlines()
     out: list[str] = []
     i = 0
     in_ul = False
     lang_prefix = ""
-    skip_english_heading = strip_spanish
 
     def close_ul():
         nonlocal in_ul
@@ -89,12 +75,14 @@ def convert(md: str, *, strip_spanish: bool = True) -> str:
         if stripped.startswith("## "):
             close_ul()
             text = stripped[3:]
-            if text == "English" and skip_english_heading:
-                i += 1
-                continue
-            if text == "Español":
-                break
-            sid = slug_heading(text)
+            if text == "English":
+                sid = "english"
+                lang_prefix = ""
+            elif text == "Español":
+                sid = "espanol"
+                lang_prefix = "es-"
+            else:
+                sid = slug_heading(text)
             out.append(f'<h2 id="{sid}" class="legal-lang-heading">{inline(text)}</h2>')
             i += 1
             continue
